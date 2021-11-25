@@ -1,0 +1,31 @@
+{
+    "name": "gsn-template",
+    "version": "1.0.0",
+    "description": "Template for starting projects with GSN",
+    "main": "index.js",
+    "scripts": {
+        "build": "hardhat compile",
+        "test": "hardhat test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/energywebfoundation/gsn-template.git"
+    },
+    "author": "JosephBagaric (joseph.bagaric@energyweb.org)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/energywebfoundation/gsn-template/issues"
+    },
+    "homepage": "https://github.com/energywebfoundation/gsn-template#readme",
+    "devDependencies": {
+        "@nomiclabs/hardhat-ethers": "2.0.2",
+        "@types/chai": "4.2.22",
+        "@types/mocha": "9.0.0",
+        "@types/node": "16.11.10",
+        "chai": "4.3.4",
+        "ethers": "5.5.1",
+        "hardhat": "2.7.0",
+        "ts-node": "10.4.0",
+        "typescript": "4.5.2"
+    }
+}
