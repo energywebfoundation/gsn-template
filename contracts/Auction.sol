@@ -11,6 +11,10 @@ contract Auction {
 
         highestBid = msg.value;
 
+        _emitBidEvent();
+    }
+
+    function _emitBidEvent() internal virtual {
         emit Bid(msg.value, msg.sender);
     }
 }

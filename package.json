@@ -19,6 +19,10 @@
     "homepage": "https://github.com/energywebfoundation/gsn-template#readme",
     "devDependencies": {
         "@nomiclabs/hardhat-ethers": "2.0.2",
+        "@opengsn/cli": "2.2.4",
+        "@opengsn/contracts": "2.2.4",
+        "@opengsn/paymasters": "2.2.4",
+        "@opengsn/provider": "2.2.4",
         "@types/chai": "4.2.22",
         "@types/mocha": "9.0.0",
         "@types/node": "16.11.10",
@@ -26,6 +30,7 @@
         "ethers": "5.5.1",
         "hardhat": "2.7.0",
         "ts-node": "10.4.0",
-        "typescript": "4.5.2"
+        "typescript": "4.5.2",
+        "web3-providers-http": "1.6.1"
     }
 }
