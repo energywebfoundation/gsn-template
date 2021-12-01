@@ -1,0 +1,13 @@
+diff --git a/node_modules/@opengsn/common/dist/ContractInteractor.js b/node_modules/@opengsn/common/dist/ContractInteractor.js
+index 7bf0270..e26e993 100644
+--- a/node_modules/@opengsn/common/dist/ContractInteractor.js
++++ b/node_modules/@opengsn/common/dist/ContractInteractor.js
+@@ -87,7 +87,7 @@ class ContractInteractor {
+         return this;
+     }
+     async _initializeNetworkParams() {
+-        this.chainId = await this.web3.eth.getChainId();
++        this.chainId = await this.web3.eth.net.getId();
+         this.networkId = await this.web3.eth.net.getId();
+         this.networkType = await this.web3.eth.net.getNetworkType();
+         // networkType === 'private' means we're on ganache, and ethereumjs-tx.Transaction doesn't support that chain type
