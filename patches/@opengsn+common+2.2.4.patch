@@ -1,5 +1,5 @@
 diff --git a/node_modules/@opengsn/common/dist/ContractInteractor.js b/node_modules/@opengsn/common/dist/ContractInteractor.js
-index 7bf0270..e26e993 100644
+index 7bf0270..400bdcb 100644
 --- a/node_modules/@opengsn/common/dist/ContractInteractor.js
 +++ b/node_modules/@opengsn/common/dist/ContractInteractor.js
 @@ -87,7 +87,7 @@ class ContractInteractor {
@@ -11,3 +11,12 @@ index 7bf0270..e26e993 100644
          this.networkId = await this.web3.eth.net.getId();
          this.networkType = await this.web3.eth.net.getNetworkType();
          // networkType === 'private' means we're on ganache, and ethereumjs-tx.Transaction doesn't support that chain type
+@@ -225,7 +225,7 @@ class ContractInteractor {
+         const relayHub = this.relayHubInstance;
+         try {
+             const externalGasLimit = await this.getMaxViewableGasLimit(relayRequest, maxViewableGasLimit);
+-            const encodedRelayCall = relayHub.contract.methods.relayCall(maxAcceptanceBudget, relayRequest, signature, approvalData, externalGasLimit).encodeABI();
++            const encodedRelayCall = relayHub.contract.methods.relayCall(maxAcceptanceBudget, relayRequest, signature, approvalData, externalGasLimit.toNumber()).encodeABI();
+             const res = await new Promise((resolve, reject) => {
+                 // @ts-ignore
+                 this.web3.currentProvider.send({
