@@ -8,7 +8,7 @@ import HttpProvider from 'web3-providers-http';
 
 const WEB3_URL = 'http://127.0.0.1:8545';
 
-describe("AuctionGSN", () => {
+describe("Gas relaying using GSN", () => {
     let auction: Contract;
     let from: string;
  

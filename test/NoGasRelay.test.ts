@@ -2,7 +2,7 @@ import { expect } from "chai";
 import { ethers } from "hardhat";
 import { Contract} from "ethers";
 
-describe("Auction", () => {
+describe("No gas relay", () => {
     let auction: Contract;
   
     beforeEach(async () => {
